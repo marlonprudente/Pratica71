@@ -8,7 +8,7 @@ import utfpr.dainf.if62c.pratica.Jogador;
  *
  * Template de projeto de programa Java usando Maven.
  *
- * @author Wilson Horstmeyer Bogado <wilson@utfpr.edu.br>
+ * @author 
  */
 public class Pratica62 {
 
