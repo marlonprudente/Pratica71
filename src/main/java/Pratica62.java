@@ -1,6 +1,7 @@
 
 import java.util.*;
 import utfpr.dainf.if62c.pratica.Jogador;
+import utfpr.dainf.if62c.pratica.JogadorComparator;
 
 /**
  * UTFPR - Universidade Tecnológica Federal do Paraná DAINF - Departamento
@@ -21,6 +22,16 @@ public class Pratica62 {
         time.add(new Jogador(13,"Fulano"));
         time.add(new Jogador(14,"Cliclano"));
         
-        time.sort((Comparator<? super Jogador>) time);
+        Collections.sort(time, new JogadorComparator(true,false));
+        
+        for(Jogador j: time){
+            System.out.println(j);
+        }
+        Jogador pesquisa;
+       int indice = Collections.binarySearch(time, new Jogador(10,"Neymar"), new JogadorComparator(true, false));
+       if (indice>=0){
+            pesquisa= time.get(indice);
+            System.out.println(" Posicao = "+ pesquisa);
+        }
     }
 }

@@ -11,15 +11,15 @@ package utfpr.dainf.if62c.pratica;
  * @author a1562339
  */
 public class Jogador {
-    private double numero;
-    private String nome;
+    public int numero;
+    public String nome;
     
-    public Jogador(double numero, String nome){
+    public Jogador(int numero, String nome){
         //this.posicao = posicao;
         this.numero = numero;
         this.nome = nome;
     }
-    public double getNum(){
+    public int getNum(){
         return numero;
     }
     public String getNom(){
