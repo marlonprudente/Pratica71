@@ -11,16 +11,19 @@ import utfpr.dainf.if62c.pratica.JogadorComparator;
  *
  * @author 
  */
-public class Pratica62 {
+public class Pratica71 {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o numero de jogadores:");
+        int num = scanner.nextInt();
+        System.out.println("Quantidade:" + num);
         ArrayList<Jogador> time = new ArrayList<>();
-        time.add(new Jogador(10,"Neymar"));     
-        time.add(new Jogador(11,"Pele"));
-        time.add(new Jogador(12,"Romario"));
-        time.add(new Jogador(13,"Fulano"));
-        time.add(new Jogador(14,"Cliclano"));
+        for(int i = 0; i<num;i++){
+            System.out.println("Digite o numero e o nome:");
+            time.add(new Jogador(scanner.nextInt(),scanner.next()));
+        }
         
         Collections.sort(time, new JogadorComparator(true,false));
         
